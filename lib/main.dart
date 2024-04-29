@@ -10,5 +10,8 @@ void main() async {
   await DioHelper.init();
   await ChacheHelper.init();
   Bloc.observer = const SimpleBlocObserver();
-  runApp(const AppRoot());
+  bool? isDark = ChacheHelper.getData(key: 'isDark');
+  runApp(AppRoot(
+    isDark: isDark,
+  ));
 }
