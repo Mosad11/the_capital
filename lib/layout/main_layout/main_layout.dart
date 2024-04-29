@@ -1,6 +1,7 @@
 import 'package:anim_search_bar/anim_search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:the_capital/core/helpers/style/icons/icons.dart';
 import 'package:the_capital/cubits/bottom_navbar_cubit/bottom_navbar_cubit.dart';
 import 'package:the_capital/cubits/bottom_navbar_cubit/bottom_navbar_states.dart';
 
@@ -34,37 +35,43 @@ class _MainLayoutState extends State<MainLayout> {
         onTap: (int index) {
           cubit.changeBottomNavbar(index);
         },
-        backgroundColor: Colors.white,
-        unselectedItemColor: Colors.grey,
+        // backgroundColor: Colors.white,
+        // unselectedItemColor: Colors.grey,
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: const Color(0xff5078fe),
+        // selectedItemColor: const Color(0xff5078fe),
       );
 
   AppBar _buildHomeAppBar(BuildContext context) => AppBar(
-        foregroundColor: const Color(0xff00BCD4),
-        backgroundColor: Colors.white,
+        // foregroundColor: const Color(0xff00BCD4),
+        // backgroundColor: Colors.white,
         title: const Text(
           "The Capital",
-          style: TextStyle(
-            color: Color(0xff00BCD4),
-            fontSize: 20,
-            letterSpacing: 1.2,
-            fontWeight: FontWeight.bold,
-          ),
+          // style: TextStyle(
+          //   color: Color(0xff00BCD4),
+          //   fontSize: 20,
+          //   letterSpacing: 1.2,
+          //   fontWeight: FontWeight.bold,
+          // ),
         ),
         leading: IconButton(
-            onPressed: () {
-              // ChacheHelper.removeData(key: 'token').then((value) {
-              //   if (value) {
-              //     navigateAndFinish(context, LoginScreen());
-              //   }
-              // });
-            },
+            onPressed: () {},
             icon: const Icon(
-              Icons.notifications,
-              color: Colors.white,
-              size: 32,
+              IconBroken.Notification,
+              size: 30,
             )),
+        //  IconButton(
+        //     onPressed: () {
+        //       // ChacheHelper.removeData(key: 'token').then((value) {
+        //       //   if (value) {
+        //       //     navigateAndFinish(context, LoginScreen());
+        //       //   }
+        //       // });
+        //     },
+        //     icon: const Icon(
+        //       Icons.notifications,
+        //       // color: Colors.white,
+        //       // size: 32,
+        //     )),
         actions: [
           Form(
             key: formKey,
